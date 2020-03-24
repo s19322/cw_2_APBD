@@ -7,11 +7,13 @@ using System.Xml.Serialization;
 
 namespace cw_2
 {
-    internal class Student
+    public class Student
     {
         [XmlElement(ElementName ="Student")]
+      
         [XmlAttribute(AttributeName ="name")]
         public string Name { get; set; }
+
         [XmlAttribute(AttributeName = "Surname")]
         public string Surname { get; set; }
         [XmlAttribute(AttributeName = "studies ")]

@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace cw_2
 {
-    class ReadData
+   public class ReadData
     {
         string pathData;
         string pathOut;
@@ -78,11 +78,8 @@ namespace cw_2
                      Mothers_name = kolumny[7],
                      Father_name = kolumny[8]
                  });
-
                     }
-
                 }
-
             IEnumerable<Student> studensNonDup = list.Distinct(new StudentCompare());
             List<Student> list2 = new List<Student>();
             foreach (var stud in studensNonDup)
