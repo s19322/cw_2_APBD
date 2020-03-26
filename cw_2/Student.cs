@@ -9,8 +9,7 @@ namespace cw_2
 {
     public class Student
     {
-        [XmlElement(ElementName ="Student")]
-      
+
         [XmlAttribute(AttributeName ="name")]
         public string Name { get; set; }
 

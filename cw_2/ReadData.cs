@@ -13,7 +13,7 @@ namespace cw_2
         string dataFormat;
         System.IO.StreamWriter files;
 
-        public ReadData(string pathData = "data.csv", string pathOut = "result.xml", string dataFormat = "XML")
+        public ReadData(string pathData = "data.csv", string pathOut = @"result.", string dataFormat = "xml")
         {
             this.pathData = pathData;
             this.pathOut = pathOut;
@@ -25,7 +25,7 @@ namespace cw_2
 
             try
             {
-                fullpath = @"C:\Users\THINK\Desktop\data.csv";// + pathData;????
+                fullpath = @"C:\Users\THINK\Desktop\data.csv";//+ pathData;
             } catch (ArgumentException argumentEx)
             {
                 Console.WriteLine("podana sciezka jest niepoprawna. Blad :" + argumentEx);
@@ -85,7 +85,7 @@ namespace cw_2
             foreach (var stud in studensNonDup)
                 list2.Add(stud);
 
-                using (FileStream writer = new FileStream(@"resul.xml", FileMode.Create))
+                using (FileStream writer = new FileStream(@"result."+dataFormat, FileMode.Create))
                 {
 
                 XmlSerializer serializer = new XmlSerializer(typeof(List<Student>));
